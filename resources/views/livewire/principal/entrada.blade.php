@@ -17,11 +17,11 @@
                                            @php($count++)
                                             @if($count ==1)
                                                 <div class="carousel-item active">
-                                                    <img src="{{asset("$imagen->url)}}" class="d-block" alt="{{$imagen->id}}" width="700vw" height="400vh" >
+                                                    <img src="{{asset("$imagen->url")}}" class="d-block" alt="{{$imagen->id}}" width="700vw" height="400vh" >
                                                 </div>
                                             @else
                                                 <div class="carousel-item">
-                                                    <img src="{{asset("$imagen->url)}}" class="d-block" alt="{{$imagen->id}}" width="700vw" height="400vh">
+                                                    <img src="{{asset("$imagen->url")}}" class="d-block" alt="{{$imagen->id}}" width="700vw" height="400vh">
                                                 </div>
                                             @endif
                                         @endif
