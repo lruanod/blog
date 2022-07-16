@@ -128,11 +128,11 @@ class BlogComponent extends Component
         $ima= Imagen::find($this->imagen_id);
         if(!empty($this->url2)){
             // eliminar archivo existente
-            Storage::disk('public')->delete($ima->url);
+              Storage::disk('public_uploads')->delete($ima->url);
             //eliminar
 
             /*tratamiento para archivos y enviarlos con un nombre unico y a una carpeta en especifico*/
-            $image= $this->url2->store('portadas','public');
+            $image= $this->url2->store('portadas','public_uploads');
             /*fin*/
             $ima->update([
                 'url'=> $image,
@@ -151,7 +151,7 @@ class BlogComponent extends Component
     public function destroy($id){
         $imagen= Imagen::find($id);
         // eliminar archivo existente
-        Storage::disk('public')->delete($imagen->url);
+        Storage::disk('public_uploads')->delete($imagen->url);
         //eliminar
         Imagen::destroy($id);
         $this->msjdelete();
