@@ -90,14 +90,19 @@ class BlogComponent extends Component
         ]);
         foreach ($this->url as $key => $image){
             /*tratamiento para archivos y enviarlos con un nombre unico y a una carpeta en especifico*/
-            // $image= $this->url->store('portadas','public');
-            $image= $this->url[$key]->store('portadas','public');
+           //  $image2= $this->url->store('portadas','public');
+             $image= $this->url[$key]->store('portadas','public_uploads');
             /*fin*/
             // registrar url de imagen con su respectivo id de entrada
             Imagen::create([
                 'url'=> $image,
                 'entrada_id'=> $this->entrada_id
             ]);
+
+
+
+
+
         }
 
         $this->msjexito2();

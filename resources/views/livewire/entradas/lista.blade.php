@@ -74,7 +74,7 @@
                 <td>
                     @foreach($imagenes as $imagen)
                         @if($imagen->entrada_id==$entrada->id)
-                          <img class="rounded" src="{{asset("storage/$imagen->url")}}" alt="Generic placeholder image" width="100vw" height="60vh"  href="#">
+                          <img class="rounded" src="{{asset("$imagen->url")}}" alt="Generic placeholder image" width="100vw" height="60vh"  href="#">
                             <button type="button" class="btn btn-danger " title="Eliminar fotografía" wire:click="destroy({{$imagen->id}})" >
                                 <i class="bi-trash text-white"></i>
                             </button>
